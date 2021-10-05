@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head> <h1> <center>Welcome to Diabetes Checkup Center</center> </h1>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+ </head>
+<body>
+
+<center>
+<p class="solid"></p>
+
+
+<!-- Result -->
+		<div>
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Oops! You have DIABETES.</span></h1>
+				<img class="gif" src="{{ url_for('static', filename='diabetes.webp') }}" alt="Diabetes Image">
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Great! You DON'T have diabetes.</span></h1>
+				<img class="gif1" src="{{ url_for('static', filename='nodiabetes.webp') }}" alt="Not Diabetes Image">
+			{% endif %}
+		</div>
+
+
+
+</center>
+
+</body>
+</html>

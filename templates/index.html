@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head> <h1> <center>Welcome to Diabetes Checkup Center</center> </h1>
+ 	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}"> 
+	
+ </head>
+<body>
+
+<center>
+<p class="solid"></p>
+<form action="{{ url_for('predict') }}" method="POST">
+<table>
+<tr>
+ <td>  <label>Pregnancies </label></td>
+  <td> <input type="text" class="rcorners4" name="pregnancies" placeholder=" eg. 0"/></td></br>
+</tr>
+<tr>
+  <td> <label>Glucose </label></td>
+  <td>  <input type="text" class="rcorners4" name="glucose" placeholder=" eg. 80 (mg/dL)"/></td></br>
+</tr>
+ <tr>
+    <td><label>BloodPressure</label></td>
+    <td><input type="text" class="rcorners4" name="bloodpressure" placeholder=" eg. 80 (mmHg)"/></td></br>
+</tr>
+<tr>
+    <td><label>Skin Thickness</label></td>
+    <td><input type="text" class="rcorners4" name="skinthickness" placeholder=" eg. 20 (mm)"/></td></br>
+</tr>
+<tr>
+    <td><label>Insulin</label></td>
+    <td><input type="text" class="rcorners4" name="insulin" placeholder=" eg. 80 (IU/mL)"/></td></br>
+</tr>
+<tr>
+    <td><label>BMI</label></td>
+    <td><input type="text" class="rcorners4" name="bmi" placeholder=" eg. 23.1 (kg/m²)"/></td>
+</tr>
+<tr>
+   <td><label>Diabetes Pedigree Function</label></td>
+   <td><input type="text" class="rcorners4" name="dpf" placeholder=" eg. 0.52"/></td>
+</tr>
+<tr>
+    <td><label>Age</label></td>
+    <td><input type="text" class="rcorners4" name="age" placeholder=" eg. 34 (years)"/></td>
+</tr>
+
+<tr><td></td><td><input type="Submit" class="rcorners4" value="Predict"/></td></tr>
+
+</table>
+
+
+</br></br></br></br>
+
+</form>
+
+
+<p class="solid"></p>
+
+
+
+</center>
+
+</body>
+</html>

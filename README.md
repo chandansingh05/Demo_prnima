@@ -1,1 +1,1 @@
-# Demo_prnima
+Diabetes Prediction ML
