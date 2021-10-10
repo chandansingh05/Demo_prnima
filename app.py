@@ -1,12 +1,13 @@
-# Importing essential libraries
 from flask import Flask, render_template, request 
+#from werkzeug.wrapper.json import JSONmixin
+from flask import Flask
 import pickle
 import numpy as np
 
 
 app = Flask(__name__)
 # Load the Random Forest CLassifier model
-#filename = 'diabetic_predict_rfc_model.pkl'
+#filename = 'diabetic_predict_rfc_model1.pkl'
 model = pickle.load(open('diabetic_predict_rfc_model1.pkl', 'rb'))
 
 
